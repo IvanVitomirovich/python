@@ -1,9 +1,5 @@
-import sys
-
-if len(sys.argv) < 4:
-    print(f'Введите данные (выработка в часах, ставка в час, премия): ')
-else:
-    v = float(sys.argv[1])
-    s = float(sys.argv[2])
-    p = float(sys.argv[3])
-    print(v * s + p)
+with open('text.txt', 'w') as file:
+    input_line = input('Text:\n')
+    while input_line:
+        file.write(f'{input_line}\n')
+        input_line = input('Text:\n')

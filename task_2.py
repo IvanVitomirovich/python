@@ -1,4 +1,9 @@
-numb_list = [300, 2, 12, 44, 1, 1, 4, 10, 7, 1, 78, 123, 55]
-result = [numb_list[i] for i in range(1, len(numb_list)) if numb_list[i] > numb_list[i - 1]]
-print(result)
+with open('text.txt') as file:
+    file_lines = file.readlines()
 
+count_str = 0
+for numb, line in enumerate(file_lines):
+    count_str += 1
+    count_words = len(line.split())
+    print(f'String №{numb + 1} - {count_words} words')
+print(f'Total {count_str} words')

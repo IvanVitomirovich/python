@@ -1,9 +1,18 @@
-from itertools import cycle, count
+result = {}
+with open('text7.txt') as file:
+    file_lines = file.readlines()
 
-n = 100
-numb_list = [x for x in range(4)]
-counter = count()
-cycler = cycle(numb_list)
-print([next(counter) for x in range(n)])
-print([next(cycler) for x in range(n)])
-
+for line in file_lines:
+    data = line.split()
+    hours = 0
+    for el in data[1:]:
+        if el != '-':
+            numb = '0'
+            for i in el:
+                if i.isdigit():
+                    numb += i
+                else:
+                    break
+            hours += int(numb)
+    result.update({data[0].strip(':'): hours})
+print(result)
