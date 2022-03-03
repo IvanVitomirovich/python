@@ -11,3 +11,4 @@ with open('text6.txt') as new_file:
         sum += int(numb)
 
 print(sum)
+

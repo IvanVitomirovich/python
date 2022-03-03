@@ -16,3 +16,4 @@ for line in file_lines:
             hours += int(numb)
     result.update({data[0].strip(':'): hours})
 print(result)
+

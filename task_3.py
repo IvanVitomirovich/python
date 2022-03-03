@@ -14,3 +14,4 @@ print('Сотрудники имеющие оклад менее 20 тысяч')
 for f, s in staff.items():
     if s < 20000:
         print(f'{f}: {s}')
+

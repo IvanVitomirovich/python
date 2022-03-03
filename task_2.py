@@ -7,3 +7,4 @@ for numb, line in enumerate(file_lines):
     count_words = len(line.split())
     print(f'String №{numb + 1} - {count_words} words')
 print(f'Total {count_str} words')
+
