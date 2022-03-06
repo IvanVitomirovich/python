@@ -1,13 +1,28 @@
-import random
+class Stationery:
+    def __init__(self, title):
+        self.title = title
 
-with open('text6.txt', 'w') as new_file:
-    for el in range(10):
-        new_file.write(f'{random.randint(0, 10)} ')
+    def draw(self):
+        print("Start drawing!")
 
-with open('text6.txt') as new_file:
-    numb_str = new_file.read().split()
-    sum = 0
-    for numb in numb_str:
-        sum += int(numb)
 
-print(sum)
+class Pen(Stationery):
+    def draw(self):
+        print(f"Start drawing with pen {self.title}")
+
+
+class Pencil(Stationery):
+    def draw(self):
+        print(f"Start drawing with pencil {self.title}")
+
+
+class Handle(Stationery):
+    def draw(self):
+        print(f"Start drawing with handle {self.title}")
+
+
+pen = Pen("A")
+pencil = Pencil("B")
+handle = Handle("C")
+for s in (pen, pencil, handle):
+    s.draw()
